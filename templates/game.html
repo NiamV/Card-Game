@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Game</title>
+</head>
+
+<body>
+    <img src="{{url_for('static', filename=currentCard)}}" width = "100"/>
+
+    <p>Which card would you like to play?</p>
+
+    <table>
+        <tr>
+            {% for card in hand %}
+                <td><img src="{{url_for('static', filename=card.imageurl)}}" width = "100"/></td>
+            {% endfor %}
+
+            <td width = "100" align = "center">Pick Up</td>
+
+        </tr>
+    </table>
+
+    {% from "_formhelpers.html" import render_field %}
+    <form method="POST">
+        <table style = "color: white">
+            {% for field in form %}
+                <td width = "100">
+                    {{ render_field(field) }}
+                </td>
+            {% endfor %}
+        </table>
+    </form>
+
+    <p>{{message}}</p>
+    <p>{{compMessage}}</p>
+</body>

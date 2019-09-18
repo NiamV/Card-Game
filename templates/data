@@ -1,0 +1,19 @@
+<!-- <table>
+        <tr>
+            {% for item in hand %}
+                <td><img src="{{url_for('static', filename={{item}})}}" /></td>
+            {%endfor%}
+        </tr>
+    </table> -->
+
+
+<!-- {% from "_formhelpers.html" import render_field %}
+    <form method="POST">
+        <table>
+            {% for card in hand %}
+                <tr>
+                    {{ render_field(form.card.name)}}
+                </tr>
+            {% endfor %}
+        </table>
+    </form> -->
