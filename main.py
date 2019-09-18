@@ -40,7 +40,10 @@ def game():
     # if started == 0:
     #     started += 1
 
-    form = generateCardSelectForm(session["playerHand"])
+    try:
+        form = generateCardSelectForm(session["playerHand"])
+    except:
+        form = generateCardSelectForm([])
     
     if request.method == 'POST':
         #Player Turn
