@@ -57,6 +57,7 @@ def game():
                     counter += 1
 
         if counter != 1:
+            compMessage = " "
             for field in form:
                 if str(field.name) != "Pickup":
                     if str(field.name) != "Play":
